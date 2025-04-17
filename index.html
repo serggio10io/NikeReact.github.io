@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nike ReactX Rejuven8 - Zapatos deportivos premium para hombres"
+    />
+    <title>Nike ReactX Rejuven8 | Calzado Deportivo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.2.0/src/lite-yt-embed.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #e6c9a8;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .presentation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      h1 {
+        font-family: "Bodoni Moda", serif;
+        font-weight: 700;
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: #000;
+        letter-spacing: 1px;
+      }
+
+      .subtitle {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .shoe-container {
+        position: relative;
+        margin: 30px 0;
+      }
+
+      .shoe-image {
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: all 0.4s ease;
+        width: 450px;
+        height: 450px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+      .shoe-image:hover {
+        transform: scale(1.03);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .figcaption {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 1.1rem;
+        margin-top: 20px;
+        color: #555;
+        max-width: 500px;
+      }
+
+      .video-section {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 40px 20px;
+        border-radius: 15px;
+        margin: 40px 0;
+        text-align: center;
+      }
+
+      .video-title {
+        font-family: "Bodoni Moda", serif;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+
+      .video-container {
+        max-width: 800px;
+        margin: 0 auto;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px;
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        .shoe-image {
+          width: 300px;
+          height: 300px;
+        }
+
+        .video-container {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="presentation">
+        <h1>Nike ReactX Rejuven8</h1>
+        <p class="subtitle">Innovación y comodidad en cada paso</p>
+
+        <div class="shoe-container">
+          <picture>
+            <img
+              src="Nike_ReactX.png"
+              alt="Nike ReactX Rejuven8 - Calzado deportivo premium"
+              class="shoe-image"
+              id="shoeImage"
+            />
+          </picture>
+          <figcaption class="figcaption">
+            Zapatos para Hombres (HV5060-100/marrón orewood claro) - Tecnología
+            ReactX para máxima amortiguación
+          </figcaption>
+        </div>
+      </div>
+
+      <div class="video-section">
+        <h2 class="video-title">Descubre la tecnología ReactX</h2>
+        <div class="video-container">
+          <lite-youtube
+            videoid="M_cKZywT8k0"
+            params="modestbranding=1&rel=0"
+          ></lite-youtube>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2023 Nike, Inc. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.2.0/src/lite-yt-embed.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const shoeImage = document.getElementById("shoeImage");
+        const originalSrc = "Nike_ReactX.png";
+        const hoverSrc = "Nike_hover.png";
+
+        shoeImage.addEventListener("mouseenter", () => {
+          shoeImage.src = hoverSrc;
+        });
+
+        shoeImage.addEventListener("mouseleave", () => {
+          shoeImage.src = originalSrc;
+        });
+
+        // Precargar imagen hover para mejor experiencia
+        const preloadImage = new Image();
+        preloadImage.src = hoverSrc;
+      });
+    </script>
+  </body>
+</html>
